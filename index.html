@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Adik Qiqis ♡</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Canvas untuk cursor trail -->
+    <canvas id="trail-canvas"></canvas>
 
+    <!-- Landing Page -->
+    <section id="landing-page" class="page active">
+        <div class="floating-hearts-container" id="landing-hearts"></div>
+        <!-- Container untuk efek ledakan love di landing page -->
+        <div class="landing-burst-container" id="landing-burst"></div>
+        
+        <div class="landing-content">
+            <h1 class="landing-title" id="landing-title">Hi, Adik Qiqis! <span class="heart-emoji">♡</span></h1>
+            <p class="landing-subtitle">Ada sedikit sesuatu buat kamu...</p>
+            <button id="open-btn" class="glow-button">Click Here ♡</button>
+        </div>
+    </section>
+
+    <!-- Main Page -->
+    <section id="main-page" class="page">
+        <!-- Tombol Back -->
+        <button id="back-btn" class="back-button" aria-label="Kembali">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        </button>
+
+        <!-- Background Love Layer -->
+        <div class="bg-love-layer" id="bg-love-layer"></div>
+
+        <!-- Galeri Foto (Zigzag Kiri & Kanan) -->
+        <div class="photo-gallery" id="photo-gallery">
+            <!-- KIRI -->
+            <div class="photo-item left" style="--pos: 1;"><img src="assets/images/foto-pia-1.jpeg" alt="Kenangan 1" loading="lazy"></div>
+            <div class="photo-item left" style="--pos: 2;"><img src="assets/images/foto-pia-2.jpeg" alt="Kenangan 2" loading="lazy"></div>
+            <div class="photo-item left" style="--pos: 3;"><img src="assets/images/foto-pia-3.jpeg" alt="Kenangan 3" loading="lazy"></div>
+            <!-- KANAN -->
+            <div class="photo-item right" style="--pos: 1;"><img src="assets/images/foto-pia-4.jpeg" alt="Kenangan 4" loading="lazy"></div>
+            <div class="photo-item right" style="--pos: 2;"><img src="assets/images/foto-pia-5.jpeg" alt="Kenangan 5" loading="lazy"></div>
+            <div class="photo-item right" style="--pos: 3;"><img src="assets/images/foto-pia-6.jpeg" alt="Kenangan 6" loading="lazy"></div>
+        </div>
+
+        <!-- Animasi Binatang Lucu -->
+        <div class="cute-animals-container" id="cute-animals"></div>
+
+        <div class="floating-hearts-container" id="main-hearts"></div>
+        <div class="sparkle-container" id="sparkles"></div>
+        
+        <div class="main-content">
+            <div class="big-heart-container">
+                <div class="big-heart" id="big-heart-anim">♡</div>
+            </div>
+            
+            <h1 class="main-title">Thank You, Adik Qiqis! <span class="heart-emoji">♡</span></h1>
+            
+            <div class="message-box">
+                <p class="typing-text" id="typing-message"></p>
+                <p class="closing-text" id="closing-message"></p>
+            </div>
+
+            <!-- Music Player -->
+            <div class="music-player">
+                <button id="play-pause-btn" class="music-btn" aria-label="Play/Pause">
+                    <svg id="play-icon" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+                    <svg id="pause-icon" viewBox="0 0 24 24" width="24" height="24" style="display:none;"><path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                </button>
+                <div class="visualizer" id="visualizer">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span class="song-title">Kasih Putih - Glenn Fredly </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Element -->
+    <audio id="bg-music" loop>
+        <source src="assets/music/kasih-putih.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
